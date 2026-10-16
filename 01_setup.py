@@ -51,7 +51,20 @@ if not check_ifInstalled("gh.exe"):
     subprocess.run("winget install GitHub.cli --scope user")
 
 # TODO: put every pkg name to list so it will be less package managers calls???
+# before that check for pipx
 
 if not check_ifInstalledPipx("uv.exe"):
     subprocess.run("pipx install uv.exe")
 
+# TODO:
+# add keepassxc
+# add neovim
+# add neovim's dots
+# add syncthing
+# add latex
+
+# TODO:
+# check later: 
+# gh release download --repo owner/repo --pattern "*.zip"
+
+# add try catches
