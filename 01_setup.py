@@ -63,8 +63,11 @@ if not check_ifInstalledPipx("uv.exe"):
 # add syncthing
 # add latex
 
+<<<<<<< HEAD
 # TODO:
 # check later: 
 # gh release download --repo owner/repo --pattern "*.zip"
 
+=======
+>>>>>>> 697386c914e03e0394078afa21b06683be2d9071
 # add try catches
