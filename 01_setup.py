@@ -56,9 +56,10 @@ if not check_ifInstalled("gh.exe"):
 if not check_ifInstalledPipx("uv.exe"):
     subprocess.run("pipx install uv.exe")
 
-if not check_ifInstalledPipx("vimiv.exe"):
-    subprocess.run("pipx install vimiv")
-    subprocess.run("pipx inject vimiv PyQt6")
+# NOTE: Doesn't work - can't install msvc build tools
+# if not check_ifInstalledPipx("vimiv.exe"):
+#     subprocess.run("pipx install vimiv")
+#     subprocess.run("pipx inject vimiv PyQt6")
 
 # TODO:
 # add keepassxc
