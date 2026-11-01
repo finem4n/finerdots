@@ -56,6 +56,10 @@ if not check_ifInstalled("gh.exe"):
 if not check_ifInstalledPipx("uv.exe"):
     subprocess.run("pipx install uv.exe")
 
+if not check_ifInstalledPipx("vimiv.exe"):
+    subprocess.run("pipx install vimiv")
+    subprocess.run("pipx inject vimiv PyQt6")
+
 # TODO:
 # add keepassxc
 # add neovim
@@ -63,11 +67,8 @@ if not check_ifInstalledPipx("uv.exe"):
 # add syncthing
 # add latex
 
-<<<<<<< HEAD
 # TODO:
 # check later: 
 # gh release download --repo owner/repo --pattern "*.zip"
 
-=======
->>>>>>> 697386c914e03e0394078afa21b06683be2d9071
 # add try catches
