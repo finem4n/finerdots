@@ -1,6 +1,7 @@
 import shutil 
 import subprocess
 import re
+import github.Github as gh
 
 def check_ifInstalled(pkg_name: str) -> bool: 
     """
@@ -49,6 +50,14 @@ if not check_ifInstalled("git.exe"):
 
 if not check_ifInstalled("gh.exe"):
     subprocess.run("winget install GitHub.cli --scope user")
+
+if not check_ifInstalled("dc.exe"):
+    token = None # Put your GitHub API token here if you want to access a private repo.
+    repo_path = "doublecmd/doublecmd"
+    g = gh(token)
+    repo = g.get_repo(repo_path)
+    latest = repo.get_latest_release()
+    print(latest.title)
 
 # TODO: put every pkg name to list so it will be less package managers calls???
 # before that check for pipx
